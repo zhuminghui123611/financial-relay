@@ -7,6 +7,19 @@
   external_node_modules = ["ccxt"]
 
 [[redirects]]
+  from = "/api/crypto-proxy"
+  to = "/.netlify/functions/crypto-proxy"
+  status = 200
+  force = true
+  
+[[redirects]]
+  from = "/api/forex/*"
+  to = "/.netlify/functions/forex-proxy/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
-  status = 200 
+  status = 200
+  force = true 
